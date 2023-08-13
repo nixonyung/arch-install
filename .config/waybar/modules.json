@@ -1,0 +1,74 @@
+{
+  "clock": {
+    "actions": {
+      "on-click": "mode",
+      "on-click-backward": "tz_down",
+      "on-click-forward": "tz_up",
+      "on-scroll-down": "shift_down",
+      "on-scroll-up": "shift_up"
+    },
+    "calendar": {
+      "format": {
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>"
+      },
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-click": "mode",
+      "on-scroll": 1,
+      "weeks-pos": "right"
+    },
+    "format": "{:%Y-%m-%d  %H:%M:%S}",
+    "interval": 1,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "format": "CPU  {usage}%",
+    "interval": 3
+  },
+  "custom/backlight": {
+    "format": " ",
+    "on-click-middle": "ddcutil --sleep-multiplier .1 setvcp 10 50",
+    "on-scroll-down": "ddcutil --sleep-multiplier .1 setvcp 10 - 10",
+    "on-scroll-up": "ddcutil --sleep-multiplier .1 setvcp 10 + 10"
+  },
+  "custom/gpu": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "format": "GPU  {}%",
+    "interval": 3
+  },
+  "custom/spacer": {
+    "format": " "
+  },
+  "disk": {
+    "format": "DISK  {percentage_used}%  ({used})",
+    "interval": 30
+  },
+  "memory": {
+    "format": "MEM  {percentage}%  ({used}GiB)",
+    "interval": 3
+  },
+  "network": {
+    "format": "  {bandwidthUpBytes}      {bandwidthDownBytes}",
+    "interval": 3,
+    "tooltip-format-disconnected": "Disconnected  ",
+    "tooltip-format-ethernet": "󰈁  {ifname}:{ipaddr}/{cidr}",
+    "tooltip-format-wifi": "   {essid} ({signalStrength}%)"
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}%  {format_source}",
+    "format-icons": {
+      "default": [" ", " ", " "]
+    },
+    "format-muted": "󰖁 {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "on-click": "pavucontrol"
+  },
+  "temperature": {
+    "format": "TEMP  {temperatureC}°C"
+  }
+}
