@@ -1,0 +1,8 @@
+[Unit]
+Description=Hyprland
+
+[Service]
+ExecStart=Hyprland
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,49 @@
+# [user]
+# name = <username>
+# email = <email>
+
+[init]
+defaultBranch = main
+[fetch]
+prune = true
+[pull]
+# (ref.) [Why You Should Use git pull -ff-only](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only)
+ff = only
+[core]
+# (ref.) [Configuring Git to handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings?platform=linux)
+autocrlf = input
+[merge]
+conflictstyle = diff3
+
+# ls/ll configs
+[color "decorate"]
+# value format: <fg> <bg>
+branch = bold yellow
+remoteBranch = dim bold yellow
+tag = bold blue
+HEAD = bold cyan
+
+# git-delta configs:
+[core]
+pager = delta
+[interactive]
+diffFilter = delta --color-only
+[delta]
+dark = true
+line-numbers = true
+navigate = true
+side-by-side = true
+true-color = always
+[diff]
+colorMoved = default
+
+[alias]
+# stashing
+save = "stash --include-untracked"
+load = "stash pop"
+# viewing logs
+# (ref.) [format string for log](https://git-scm.com/docs/pretty-formats)
+# (ref.) https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298
+ls = "log --decorate --format=format:'%C(bold blue)%h %Creset%C(dim blue)(%ar) (by %an)%Creset %C(white)%s %Creset%C(auto)%d%Creset'"
+ll = "ls --stat"
+graph = "ls --graph --all"

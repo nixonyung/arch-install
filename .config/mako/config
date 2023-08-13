@@ -1,0 +1,9 @@
+background-color=#222222cc
+border-color=#ffffff88
+border-radius=8
+border-size=2
+default-timeout=5000
+font=Recursive Sans Casual Static 11
+outer-margin=5
+padding=10,12
+width=400

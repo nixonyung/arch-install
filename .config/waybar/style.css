@@ -1,0 +1,45 @@
+/* (ref.) https://github.com/lgaboury/Sway-Waybar-Install-Script/blob/master/.config/waybar/style.css */
+
+* {
+  color: #dddddd;
+  font-family: Recursive Sans Casual Static;
+  font-size: 12px;
+}
+
+#waybar {
+  background-color: #0b0b10;
+}
+
+#workspaces {
+  margin: 0 8px;
+}
+#workspaces button {
+  margin: 0 4px;
+  border-color: transparent;
+  border-radius: 9999px;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  transition: none;
+}
+#workspaces button:hover {
+  background: #525260;
+}
+#workspaces button.active {
+  background: #333340;
+}
+
+#pulseaudio,
+#custom-backlight,
+#network,
+#cpu,
+#custom-gpu,
+#memory,
+#disk,
+#temperature,
+#clock {
+  margin: 6px;
+  padding: 0 12px;
+  background: #1c1c24;
+  border: 1px solid #30303a;
+  border-radius: 9999px;
+}
