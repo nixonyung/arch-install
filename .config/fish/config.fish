@@ -25,3 +25,7 @@ alias tree "ls --tree --level 2"
 # abbr upgrade_pacman "sudo pacman -Syu && sudo pacman -Scc && sudo pacman -Qdtq | sudo pacman -Rns -"
 # abbr upgrade_npm_global "npm install npm -g; npm update -g"
 # abbr upgrade_fisher "fisher update"
+
+starship init fish | source
+fzf --fish | source
+zoxide init fish | source
